@@ -54,7 +54,7 @@ public class ClientTest extends BaseTest{
                 .body(RequestBody.putRequestBody)
                 .when().put("clients/"+getClientId()+".json")
                 .then().statusCode(200)
-                .body("first_name",equalTo("Ziemniak"));
+                .body("first_name",equalTo("Roman"));
 
 
     }
