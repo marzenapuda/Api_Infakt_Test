@@ -2,8 +2,8 @@ package Config;
 
 public class RequestBody {
 
-    public static String getRequestBody(String businessActivity){
-        return switch (businessActivity){
+    public static String getRequestBody(String businessActivity) {
+        return switch (businessActivity) {
             case "private_person" -> """
                     {"client": {
                            "business_activity_kind": "private_person",

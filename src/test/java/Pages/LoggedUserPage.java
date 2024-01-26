@@ -1,12 +1,10 @@
 package Pages;
 
-import Data.User;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -28,34 +26,27 @@ public class LoggedUserPage {
     @FindBy(xpath = "//a[@data-tooltip='Ustawienia' and not (div[@id='onetrust-pc-dark-filter ot-fade-in'])]")
     private WebElement settingsButton;
 
-
-
-//    @FindBy(xpath = "//input[@id='companyNIPNumberSearchModal']")
-//    private WebElement nipInput;
-
     @FindBy(xpath = "div[@id='onetrust-pc-dark-filter ot-fade-in']")
     private WebElement overlayer;
 
     public LoggedUserPage acceptCookies() {
 
-        if (driver.getCurrentUrl().equals("https://front.sandbox-infakt.pl/dodaj-fakture")){
+        if (driver.getCurrentUrl().equals("https://front.sandbox-infakt.pl/dodaj-fakture")) {
             driver.navigate().to("https://front.sandbox-infakt.pl/start");
         }
 
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.titleIs("inFakt"));
         acceptCookiesButton.click();
         return this;
     }
 
-    public SettingsPage goToSettings(){
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(3));
+    public SettingsPage goToSettings() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         wait.until(ExpectedConditions.invisibilityOf(overlayer));
         settingsButton.click();
         return new SettingsPage(driver);
     }
-
-
 
 
 }

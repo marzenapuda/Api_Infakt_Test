@@ -8,58 +8,47 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 
 public class Api {
-    public static Response addClient(String requestBody){
-         return given()
+    public static Response addClient(String requestBody) {
+        return given()
                 .baseUri("https://api.sandbox-infakt.pl/api/v3")
-                .header("Content-type","application/json")
+                .header("Content-type", "application/json")
                 .header("X-inFakt-ApiKey", User.apiKey)
                 .body(requestBody)
                 .when()
                 .post("/clients.json").then().log().all().statusCode(201).extract().response();
-
     }
 
-    public static String getClientId(){
-        String clientId = given()
+    public static String getClientId() {
+        return given()
                 .baseUri("https://api.sandbox-infakt.pl/api/v3")
-                .header("Content-type","application/json")
-                .header("X-inFakt-ApiKey",User.apiKey)
+                .header("Content-type", "application/json")
+                .header("X-inFakt-ApiKey", User.apiKey)
                 .when().get("clients.json").path("entities[0].id").toString();
-
-        return clientId;
-
     }
-    public static List<Integer> getClientIdList(){
-        List<Integer> clientIdList = given()
+
+    public static List<Integer> getClientIdList() {
+        return given()
                 .baseUri("https://api.sandbox-infakt.pl/api/v3")
-                .header("Content-type","application/json")
-                .header("X-inFakt-ApiKey",User.apiKey)
+                .header("Content-type", "application/json")
+                .header("X-inFakt-ApiKey", User.apiKey)
                 .when().get("clients.json").path("entities.id");
-
-        return clientIdList;
-
     }
 
-
-    public static String getClientsCount(){
-        String clientsCount = given()
+    public static String getClientsCount() {
+        return given()
                 .baseUri("https://api.sandbox-infakt.pl/api/v3")
-                .header("Content-type","application/json")
-                .header("X-inFakt-ApiKey",User.apiKey)
+                .header("Content-type", "application/json")
+                .header("X-inFakt-ApiKey", User.apiKey)
                 .when().get("clients.json").path("metainfo.count").toString();
-
-        return clientsCount;
-
     }
 
-    public static void deleteClient(Integer id){
+    public static void deleteClient(Integer id) {
         given()
                 .baseUri("https://api.sandbox-infakt.pl/api/v3")
-                .header("Content-type","application/json")
-                .header("X-inFakt-ApiKey",User.apiKey)
+                .header("Content-type", "application/json")
+                .header("X-inFakt-ApiKey", User.apiKey)
                 .when()
-                .delete("clients/"+id+".json");
-
+                .delete("clients/" + id + ".json");
     }
 
 

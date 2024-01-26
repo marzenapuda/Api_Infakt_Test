@@ -3,7 +3,6 @@ package Data;
 public class User {
 
 
-
     private String randomEmail = System.currentTimeMillis() + "@abc.com";
 
     private String password = "Abc12345$";

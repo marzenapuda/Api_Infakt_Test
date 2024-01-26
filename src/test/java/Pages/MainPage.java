@@ -1,6 +1,5 @@
 package Pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,8 +10,8 @@ public class MainPage {
     WebDriver driver;
 
 
-    public MainPage (WebDriver driver){
-        PageFactory.initElements(driver,this);
+    public MainPage(WebDriver driver) {
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
@@ -23,12 +22,12 @@ public class MainPage {
     private WebElement registerButton;
 
 
-    public MainPage acceptCookies(){
+    public MainPage acceptCookies() {
         acceptCookiesButton.click();
         return this;
     }
 
-    public RegisterPage goToRegisterPage(){
+    public RegisterPage goToRegisterPage() {
         registerButton.click();
         return new RegisterPage(driver);
     }

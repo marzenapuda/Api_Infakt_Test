@@ -5,16 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.sql.Time;
-import java.sql.Timestamp;
-
 public class RegisterPage {
 
     private WebDriver driver;
 
     public RegisterPage(WebDriver driver) {
-        PageFactory.initElements(driver,this);
-        this.driver=driver;
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
     }
 
 
@@ -31,23 +28,22 @@ public class RegisterPage {
     private WebElement registerButton;
 
 
-
-
-    public RegisterPage fillEmail(String email){
+    public RegisterPage fillEmail(String email) {
         emailInput.sendKeys(email);
         return this;
     }
 
-    public RegisterPage fillPassword(String password){
+    public RegisterPage fillPassword(String password) {
         passwordInput.sendKeys(password);
         return this;
     }
-    public RegisterPage clickCheckbox(){
+
+    public RegisterPage clickCheckbox() {
         checkbox.click();
         return this;
     }
 
-    public LoggedUserPage clickRegister(){
+    public LoggedUserPage clickRegister() {
         registerButton.click();
         return new LoggedUserPage(driver);
     }

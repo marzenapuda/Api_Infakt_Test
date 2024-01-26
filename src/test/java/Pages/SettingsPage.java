@@ -11,7 +11,7 @@ public class SettingsPage {
     private WebDriver driver;
 
     public SettingsPage(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
@@ -30,29 +30,29 @@ public class SettingsPage {
     @FindBy(xpath = "//div[@class='summary-info green-box']//dl[2]/dd")
     private WebElement apiKey;
 
-    public SettingsPage goToApiSettings(){
+    public SettingsPage goToApiSettings() {
         apiButton.click();
         return this;
     }
 
-    public SettingsPage inputKeyLabel(String keyLabel){
+    public SettingsPage inputKeyLabel(String keyLabel) {
         keyLabelInput.sendKeys(keyLabel);
         return this;
     }
-    public SettingsPage inputPassword(String password){
+
+    public SettingsPage inputPassword(String password) {
         passwordInput.sendKeys(password);
         return this;
     }
 
-    public SettingsPage submit(){
+    public SettingsPage submit() {
         submitButton.click();
         return this;
     }
 
-    public void getApiKey(User user){
-         user.setApiKey(apiKey.getText());
+    public void getApiKey(User user) {
+        user.setApiKey(apiKey.getText());
     }
-
 
 
 }

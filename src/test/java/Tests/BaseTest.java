@@ -9,10 +9,10 @@ import org.testng.annotations.BeforeSuite;
 import java.time.Duration;
 
 public class BaseTest {
-     protected WebDriver driver;
+    protected WebDriver driver;
 
     @BeforeSuite
-    public void setup(){
+    public void setup() {
         driver = DriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -30,9 +30,6 @@ public class BaseTest {
                 .inputKeyLabel(user.getKeyLabel())
                 .inputPassword(user.getPassword())
                 .submit().getApiKey(user);
-        System.out.println(user.getApiKey());
-
-
     }
 
 
