@@ -6,19 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b4492b08-55da-424c-a767-50865a311ca5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Config/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Config/Api.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Config/RequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Config/RequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Data/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Data/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoggedUserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoggedUserPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/RegisterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/SettingsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/SettingsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/MainTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,8 +149,8 @@
         <item itemvalue="TestNG.ClientTest.addThreeClientsThenCheckCount" />
         <item itemvalue="TestNG.ClientTest.editClient" />
         <item itemvalue="TestNG.ClientTest.getClientDetails" />
-        <item itemvalue="TestNG.ClientTest.addThreeClientsThenGetCount" />
         <item itemvalue="TestNG.ClientTest.addNewClient" />
+        <item itemvalue="TestNG.ClientTest.addThreeClientsThenGetCount" />
       </list>
     </recent_temporary>
   </component>

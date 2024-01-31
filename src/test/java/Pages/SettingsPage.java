@@ -27,7 +27,7 @@ public class SettingsPage {
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement submitButton;
 
-    @FindBy(xpath = "//div[@class='summary-info green-box']//dl[2]/dd")
+    @FindBy(xpath = "//dl[dt[text()='Wygenerowany klucz API']]/dd")
     private WebElement apiKey;
 
     public SettingsPage goToApiSettings() {

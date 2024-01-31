@@ -15,7 +15,7 @@ public class Api {
                 .header("X-inFakt-ApiKey", User.apiKey)
                 .body(requestBody)
                 .when()
-                .post("/clients.json").then().log().all().statusCode(201).extract().response();
+                .post("/clients.json").then().statusCode(201).extract().response();
     }
 
     public static String getClientId() {
