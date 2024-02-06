@@ -3,6 +3,7 @@ package Tests;
 import Config.RequestBody;
 import Data.User;
 import io.qameta.allure.Step;
+import io.qameta.allure.restassured.AllureRestAssured;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
@@ -39,6 +40,7 @@ public class ClientTest extends BaseTest {
         addClient(RequestBody.getRequestBody("default"));
 
         given()
+                .filter(new AllureRestAssured())
                 .baseUri("https://api.sandbox-infakt.pl/api/v3")
                 .header("Content-type", "application/json")
                 .header("X-inFakt-ApiKey", User.apiKey)
@@ -62,6 +64,7 @@ public class ClientTest extends BaseTest {
         addClient(RequestBody.getRequestBody("default"));
 
         given()
+                .filter(new AllureRestAssured())
                 .baseUri("https://api.sandbox-infakt.pl/api/v3")
                 .header("Content-type", "application/json")
                 .header("X-inFakt-ApiKey", User.apiKey)
@@ -86,6 +89,7 @@ public class ClientTest extends BaseTest {
         addClient(RequestBody.getRequestBody("self_employed"));
         addClient(RequestBody.getRequestBody("other_business"));
         given()
+                .filter(new AllureRestAssured())
                 .baseUri("https://api.sandbox-infakt.pl/api/v3")
                 .header("Content-type", "application/json")
                 .header("X-inFakt-ApiKey", User.apiKey)
